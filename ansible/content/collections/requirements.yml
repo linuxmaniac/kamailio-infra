@@ -1,0 +1,13 @@
+---
+# Requirements for Ansible Collections
+#
+# Install/upgrade collections:
+#   ansible-galaxy collection install \
+#     --upgrade -r content/collections/requirements.yml
+# List installed collections:
+#   ansible-galaxy collection list
+
+collections:
+
+- name: community.general
+- name: community.crypto

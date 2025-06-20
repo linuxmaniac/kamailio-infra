@@ -1,0 +1,8 @@
+---
+- name: Silly playbook
+  hosts: all
+
+  tasks:
+    - name: Silly step
+      ansible.builtin.debug:
+        msg: Hola caracola

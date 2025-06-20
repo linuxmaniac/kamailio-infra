@@ -1,0 +1,17 @@
+---
+use_default_rules: true
+skip_list:
+- name[missing]
+- name[play]
+- yaml[new-line-at-end-of-file]
+- fqcn-builtins
+- yaml[colons]
+
+# parseable output in the format of pep8
+parseable: true
+
+# quieter, although not silent output
+quiet: false
+
+# verbosity setting
+verbosity: 0

@@ -1,0 +1,9 @@
+---
+# Requirements for Ansible Roles
+#
+# Install/upgrade roles:
+#   ansible-galaxy role install --upgrade -r content/roles/requirements.yml
+# List installed roles:
+#   ansible-galaxy role list
+
+roles: []
