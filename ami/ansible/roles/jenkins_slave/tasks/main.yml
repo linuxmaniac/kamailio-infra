@@ -68,6 +68,8 @@
     src: "{{ item.src }}"
     state: link
   loop:
+    - dst: resolute
+      src: gutsy
     - dst: noble
       src: gutsy
     - dst: jammy
