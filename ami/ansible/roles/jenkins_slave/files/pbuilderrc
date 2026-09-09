@@ -38,7 +38,15 @@ case "$distribution" in
     # ensure it's unset
     unset LD_PRELOAD
     ;;
-  bullseye|bookworm|trixie)
+  bullseye)
+    MIRRORSITE="http://archive.debian.org/debian"
+    # support bootstrapping archived repository with expired GPG key
+    APTGETOPT=("${APTGETOPT[@]}" "-o Acquire::Check-Valid-Until=false" "-o APT::Get::AllowUnauthenticated=true" --allow-unauthenticated)
+    # package install speedup
+    EXTRAPACKAGES="eatmydata"
+    export LD_PRELOAD="${LD_PRELOAD:+$LD_PRELOAD:}libeatmydata.so"
+    ;;
+  bookworm|trixie)
     MIRRORSITE="http://deb.debian.org/debian"
     # security and updates
     OTHERMIRROR="deb http://security.debian.org/debian-security ${distribution}-security main"
